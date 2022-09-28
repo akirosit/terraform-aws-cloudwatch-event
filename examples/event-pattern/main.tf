@@ -3,8 +3,7 @@ resource "aws_sns_topic" "notifications" {
 }
 
 module "eventbridge" {
-  source        = "../../"
-  #source        = "akirosit/cloudwatch-event/aws"
+  source        = "akirosit/cloudwatch-event/aws"
   name          = "asg-notifications"
   description   = "ASG Notifications"
   create_target = true
